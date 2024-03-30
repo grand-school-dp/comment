@@ -1,0 +1,31 @@
+security:
+    admin:
+        secret: ${SECRET}
+        client-id: ${CLIENT_ID}
+spring:
+    datasource:
+        hikari:
+            max-lifetime: 600000
+#        username: postgres
+#        password: postgres
+#        driver-class-name: org.postgresql.Driver
+        password: ${DB_PASSWORD}
+        url: jdbc:mysql://${DB_URL}:3306/${DB_NAME}
+        username: ${DB_USER}
+
+    jpa:
+        hibernate:
+            ddl-auto: update
+    mail:
+        receiver:
+            email: ${MAIL_RECEIVER}
+        host: smtp.gmail.com
+        password: ${MAIL_PASSWORD}
+        username: ${MAIL_USERNAME}
+        port: 587
+        properties:
+            mail:
+                smtp:
+                    auth: true
+                    starttls:
+                        enable: true
