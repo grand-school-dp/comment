@@ -43,6 +43,7 @@ public class SecurityConfig {
 //                    cors.addAllowedOrigin("http://localhost:5500");
 //                    cors.addAllowedOrigin("http://localhost:63342");
                     cors.addAllowedOrigin("https://grand-school.dp.ua/");
+                    cors.addAllowedOrigin("https://s-grand.com.ua/");
                     cors.addAllowedHeader("*");
                     cors.addAllowedMethod("*");
                     return cors;
